@@ -47,14 +47,16 @@ export default function Header() {
            onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
           Về chúng tôi
         </a>
-        <button style={{
+        <a href="/login" style={{
           background: 'transparent',
           border: 'none',
           color: 'var(--text-primary)',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center'
         }}>
           <User />
-        </button>
+        </a>
         <button style={{
           background: 'transparent',
           border: 'none',

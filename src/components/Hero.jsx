@@ -82,7 +82,7 @@ export default function Hero() {
         >
           Tìm gần đây
         </button>
-        <button style={{
+        <a href="/add" style={{
           background: 'rgba(255,255,255,0.1)',
           color: '#fff',
           padding: '1rem 2rem',
@@ -91,13 +91,15 @@ export default function Hero() {
           fontSize: '1.1rem',
           fontWeight: 600,
           cursor: 'pointer',
-          transition: 'background 0.2s ease'
+          transition: 'background 0.2s ease',
+          textDecoration: 'none',
+          display: 'inline-block'
         }}
         onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
         onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
         >
           Thêm địa điểm
-        </button>
+        </a>
       </motion.div>
     </section>
   );

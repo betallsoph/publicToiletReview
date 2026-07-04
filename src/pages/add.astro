@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import AddToiletForm from '../components/AddToiletForm.jsx';
+---
+
+<Layout>
+  <Header client:load />
+  
+  <main style="position: relative;">
+    <div class="container">
+      <AddToiletForm client:load />
+    </div>
+  </main>
+</Layout>
