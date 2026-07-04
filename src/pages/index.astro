@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import Hero from '../components/Hero.jsx';
+import ToiletList from '../components/ToiletList.jsx';
+---
+
+<Layout>
+	<Header client:load />
+	<main>
+		<Hero client:load />
+		<ToiletList client:load />
+	</main>
+</Layout>
