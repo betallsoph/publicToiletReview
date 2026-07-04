@@ -13,10 +13,10 @@ export default function Header() {
       justifyContent: 'space-between',
       alignItems: 'center',
     }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, fontSize: '1.25rem' }}>
+      <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, fontSize: '1.25rem', color: 'inherit' }}>
         <MapPin color="var(--primary)" />
         <span>RestFinder</span>
-      </div>
+      </a>
       
       <div style={{
         display: 'flex',
@@ -41,7 +41,12 @@ export default function Header() {
         />
       </div>
 
-      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+        <a href="/about" style={{ fontSize: '0.95rem', fontWeight: 500, color: 'var(--text-secondary)', transition: 'color 0.2s' }}
+           onMouseOver={e => e.currentTarget.style.color = 'var(--text-primary)'}
+           onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
+          Về chúng tôi
+        </a>
         <button style={{
           background: 'transparent',
           border: 'none',

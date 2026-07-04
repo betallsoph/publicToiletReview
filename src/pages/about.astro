@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+import AboutHero from '../components/AboutHero.jsx';
+---
+
+<Layout>
+  <Header client:load />
+  <main>
+    <AboutHero client:load />
+    
+    <section className="container" style="max-width: 800px; margin: 4rem auto; color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+      <h2 style="color: var(--text-primary); font-size: 2rem; margin-bottom: 1.5rem;">Câu chuyện của chúng tôi</h2>
+      <p style="margin-bottom: 1.5rem;">
+        Được thành lập vào năm 2026, RestFinder bắt đầu từ một ý tưởng đơn giản: không ai phải lo lắng về việc tìm kiếm một nhà vệ sinh sạch sẽ khi đang ở ngoài đường. Từ những con phố sầm uất ở trung tâm đến những trạm dừng chân ven đô, chúng tôi mong muốn cung cấp một bản đồ tiện ích cho tất cả mọi người.
+      </p>
+      <p style="margin-bottom: 2rem;">
+        Sức mạnh của RestFinder nằm ở cộng đồng. Những đánh giá trung thực, những đóng góp kịp thời của các bạn giúp giữ cho hệ thống dữ liệu luôn được cập nhật và chính xác nhất.
+      </p>
+      
+      <div class="glass-panel" style="padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.5rem;">Liên hệ với đội ngũ</h3>
+        <p style="margin-bottom: 1.5rem;">Bạn có ý tưởng phát triển tính năng mới hay muốn hợp tác? Đừng ngần ngại để lại tin nhắn cho chúng tôi.</p>
+        
+        <form style="display: flex; flex-direction: column; gap: 1rem;">
+          <input type="text" placeholder="Tên của bạn" style="background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); padding: 1rem; border-radius: 8px; color: #fff; outline: none;" />
+          <input type="email" placeholder="Email liên hệ" style="background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); padding: 1rem; border-radius: 8px; color: #fff; outline: none;" />
+          <textarea placeholder="Tin nhắn..." rows="4" style="background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); padding: 1rem; border-radius: 8px; color: #fff; outline: none;"></textarea>
+          <button type="button" style="background: var(--primary); color: #fff; border: none; padding: 1rem; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 0.5rem;">
+            Gửi tin nhắn
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>

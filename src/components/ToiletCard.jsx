@@ -1,10 +1,11 @@
 import React from 'react';
-import { Star, Navigation, ShieldCheck, DollarSign, Accessibility } from 'lucide-react';
+import { Star, Navigation, ShieldCheck, Accessibility } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function ToiletCard({ data, index }) {
   return (
-    <motion.div
+    <motion.a
+      href={`/toilet/${data.id}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -15,7 +16,9 @@ export default function ToiletCard({ data, index }) {
         flexDirection: 'column',
         gap: '1rem',
         cursor: 'pointer',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        textDecoration: 'none',
+        color: 'inherit'
       }}
       onMouseOver={e => {
         e.currentTarget.style.transform = 'translateY(-5px)';
@@ -74,6 +77,6 @@ export default function ToiletCard({ data, index }) {
           </div>
         )}
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
